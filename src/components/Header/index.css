@@ -1,0 +1,141 @@
+.header-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo-image {
+    height: 30px;
+}
+
+.icon-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.end-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.language-selection {
+    border-width: 0px;
+    outline: none;
+    font-size: large;
+}
+
+.icon {
+    margin: 6px;
+}
+
+.grey-line {
+    width: 100%;
+    background-color: grey;
+}
+
+.details-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail {
+    margin: 6px;
+}
+
+.tagline-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.para {
+    font-weight: bold;
+    text-align: center;
+}
+
+.icon-menu {
+    display: none;
+}
+
+.logo-name {
+    text-align: center;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px; /* Width of the sidebar */
+    height: 100%; /* Full height */
+    background-color: white; /* Background color */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    padding: 20px;
+    z-index: 1000; /* Make sure it is above other elements */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.sidebar-logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space between logo and content */
+}
+
+.sidebar-logo-image {
+    height: 50px; 
+    margin:7px;/* Adjust as needed */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 480px) {
+    .header-section {
+        padding: 5px;
+    }
+    
+    .icon-menu {
+        display: block;
+        margin: 2px;
+    }
+    
+    .user-details {
+        display: none;
+    }
+    
+    .logo-section {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .logo-image {
+        height: 23px;
+        margin-left: 3px;
+    }
+    
+    .detail {
+        font-size: 15px;
+    }
+    .user-details-mobile{
+        display: flex;
+        flex-direction: column;
+    }
+    .user{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
