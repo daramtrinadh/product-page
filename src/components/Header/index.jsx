@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Link, useNavigate } from 'react-router-dom';
 import { CiSearch } from "react-icons/ci";
 import { GrFavorite } from "react-icons/gr";
 import { LiaShoppingBagSolid } from "react-icons/lia";
@@ -15,7 +15,7 @@ const details = ['SHOP', 'SKILLS', 'STORIES', 'ABOUT', 'CONTACT US'];
 const Header = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
     const [isPopupOpen, setPopupOpen] = useState(false);
-    const { logout, isLoggedIn } = useAuth(); // Assume isAuthenticated indicates user status
+    const { logout, isLoggedIn } = useAuth(); 
     const navigate = useNavigate(); // Initialize useNavigate
 
     const toggleSidebar = () => {
@@ -39,8 +39,10 @@ const Header = () => {
         <div className="header-bar">
             <div className='header-section'>
                 <div className="logo-section">
+                    <Link to ="/">
                     <AiOutlineMenu size={23} className="icon-menu" onClick={toggleSidebar} />
                     <img src='/images/Logo.png' alt='logo' className='logo-image' />
+                    </Link>
                 </div>
                 <h1 className="logo-name">TANTRA</h1>
                 <div className="end-section">

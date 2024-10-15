@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { useParams } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext'; // Import the AuthContext
+import { useAuth } from '../../context/AuthContext';
 import './index.css';
 
 const ProductItemDetail = () => {
   const { id } = useParams(); 
   const [product, setProduct] = useState(null); 
   const [loading, setLoading] = useState(true); 
-  const { addToCart, addToWishlist } = useAuth(); // Destructure functions from context
+  const { addToCart, addToWishlist } = useAuth();
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)

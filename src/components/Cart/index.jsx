@@ -3,21 +3,18 @@ import React from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 
-import './index.css'; // Create this file for custom styles
+import './index.css'; 
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateCartItemQuantity } = useAuth();
 
-  // Calculate the total price of items in the cart
   const total = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
 
-  // Function to handle placing an order
   const handlePlaceOrder = () => {
     alert('Order placed successfully!');
-    // Add any additional order logic here, such as clearing the cart or sending order details to a backend
   };
 
   return (

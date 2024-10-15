@@ -29,6 +29,13 @@ const Signup = () => {
     localStorage.setItem('user', JSON.stringify(user));
 
     alert('Signup successful!');
+
+    // Clear form fields after successful signup
+    setCredentials({
+      username: '',
+      password: '',
+      confirmPassword: '',
+    });
   };
 
   return (
@@ -39,6 +46,7 @@ const Signup = () => {
           type="text"
           name="username"
           placeholder="Username"
+          value={credentials.username}
           onChange={handleChange}
           required
         />
@@ -46,6 +54,7 @@ const Signup = () => {
           type="password"
           name="password"
           placeholder="Password"
+          value={credentials.password}
           onChange={handleChange}
           required
         />
@@ -53,6 +62,7 @@ const Signup = () => {
           type="password"
           name="confirmPassword"
           placeholder="Confirm Password"
+          value={credentials.confirmPassword}
           onChange={handleChange}
           required
         />
